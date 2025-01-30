@@ -1,28 +1,54 @@
+@import "./assets/styles/vars.module.less";
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: @bgcolor;
+  color: @whitecolor;
+  font-size: 16px;
+}
 
 .app {
-  margin: 32px auto;
+  margin: 26px auto;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   min-width: 320px;
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
+  font-weight: @fw400;
+  overflow: hidden;
 }
 
-
 h1 {
-  text-align: center;
-  margin: 15px;
-  font-weight: 400;
+  margin: 0 16px 11px;
   font-size: 40px;
   text-align: center;
   color: #fff;
+  font-weight: @fw400;
 }
 
 .container {
-  max-width: 500px;
   width: 100%;
   margin: 0 auto;
   padding: 0 8px;
+
+  @media (min-width: 360px) {
+    padding: 0 20px;
+    max-width: 500px;
+  }
+
+  @media (min-width: @tabletWidth) {
+    max-width: 992px;
+  }
+}
+
+.wrapperTournaments {
+  @media (min-width: @tabletWidth) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
 

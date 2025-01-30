@@ -5,8 +5,7 @@ export function Loader() {
 
 
     return (
-        <div className={styles.loader} >
-
+        <div className={styles.loader}>
             <div className={styles.progressBar}>
                 <div className={styles.progress}>
                 </div>

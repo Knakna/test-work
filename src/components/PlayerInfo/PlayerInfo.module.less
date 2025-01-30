@@ -1,41 +1,41 @@
+@import "../../assets/styles/vars.module.less";
+
+
 .info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .between-flex();
   width: 100%;
-  margin: 20px auto;
+  margin: 20px auto 17px;
   padding: 0 3px;
 }
 
 .user {
-  display: flex;
+  .center-flex();
   gap: 8px;
 }
 
 .wrap {
   display: flex;
   flex-direction: column;
-  gap: 2px;
   align-items: flex-end;
-}
+  line-height: 1;
 
-.name {
-  font-weight: 400;
-  font-size: 16px;
-  text-align: right;
-  color: #fff;
-}
+  .name {
+    font-size: 16px;
+    text-align: right;
+  }
 
-.rating {
-  width: 44px;
-  height: 8px;
-  display: flex;
-}
+  .rating {
+    height: 8px;
+    display: flex;
+    gap: 1px;
+  }
 
-.avatar {
-  img {
-    width: 34px;
-    height: 34px;
+  .avatar {
+    img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -51,19 +51,58 @@
   font-size: 12px;
   text-align: right;
   color: #fff;
-}
+  transition: background .3s;
 
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-
-  img {
-    width: 32px;
-    height: 26px;
+  @media (hover: hover) {
+    &:hover {
+      .iconUnvisible {
+        background: @accenthover;
+      }
+    }
   }
 
-  background: #00bb40;
+  &:active {
+    .iconUnvisible {
+      background: @accentactive;
+    }
+  }
 
+  .iconUnvisible, .iconVisible {
+    .center-flex();
+    background: @accent;
+    border-radius: 16px;
+
+    img {
+      width: 32px;
+      height: 26px;
+    }
+  }
+
+  .iconUnvisible {
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+
+.balance {
+  &:has(.showBalance) {
+    background: @accent;
+
+    @media (hover: hover) {
+      &:hover {
+        background: @accenthover;
+
+        .iconUnvisible {
+          background: @accenthover;
+        }
+      }
+    }
+
+    &:active {
+      background: @accentactive;
+    }
+  }
 }

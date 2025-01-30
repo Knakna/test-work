@@ -1,60 +1,77 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("./assets/fonts/Montserrat-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("./assets/fonts/Montserrat-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("./assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("./assets/fonts/Montserrat-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 input,
 button {
-  margin: 0;
-  font: inherit;
+    margin: 0;
+    font: inherit;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 a {
-  text-decoration: inherit;
+    text-decoration: inherit;
 }
-
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  font-family: "Montserrat", sans-serif;
-  background: #211F2D;
-  color: rgb(255, 255, 255);
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
-
 button {
-  font-family: inherit;
-  cursor: pointer;
-  transition: all 0.25s;
-  outline: none;
-  box-shadow: none;
-  border: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s;
+    outline: none;
+    box-shadow: none;
+    border: none;
 }
 
 button:focus,
 button:focus-visible {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
