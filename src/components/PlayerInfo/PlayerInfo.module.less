@@ -46,19 +46,21 @@
 .balance {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 9px;
-  border-radius: 24px;
+
   max-width: 120px;
   width: 100%;
   min-height: 26px;
   padding-right: 8px;
 
-  background: #373352;
+  border-radius: 24px;
+  background: @bgcomponent;
   line-height: 1;
-  font-weight: 400;
+  font-weight: @fw400;
   font-size: 12px;
-  text-align: right;
-  color: #fff;
+  text-align: left;
+  color: @whitecolor;
   transition: background .3s;
 
   @media (hover: hover) {
@@ -111,6 +113,7 @@
 
   &:has(.showBalance) {
     background: @accent;
+    gap: 3px;
 
     @media (hover: hover) {
       &:hover {
