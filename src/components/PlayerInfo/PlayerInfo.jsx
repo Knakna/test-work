@@ -51,6 +51,5 @@ export function PlayerInfo() {
 }
 
 
-// className={`${styles.status} ${isCanceled ? styles.canceled : ''}`}
 
 
