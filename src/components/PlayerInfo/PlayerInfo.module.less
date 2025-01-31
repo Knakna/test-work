@@ -55,25 +55,25 @@
   padding-right: 8px;
 
   border-radius: 24px;
-  background: @bgcomponent;
+  background: @bgComponent;
   line-height: 1;
   font-weight: @fw400;
   font-size: 12px;
   text-align: left;
-  color: @whitecolor;
+  color: @whiteColor;
   transition: background .3s;
 
   @media (hover: hover) {
     &:hover {
       .iconUnvisible {
-        background: @accenthover;
+        background: @accentHover;
       }
     }
   }
 
   &:active {
     .iconUnvisible {
-      background: @accentactive;
+      background: @accentActive;
     }
   }
 
@@ -97,7 +97,7 @@
 
   span:nth-child(2) {
     display: inline-block;
-    padding: 4px 0px;
+    padding: 4px 0;
   }
 }
 
@@ -106,7 +106,7 @@
   @media (hover: hover) {
     &:hover {
       .iconVisible {
-        background: @accenthover;
+        background: @accentHover;
       }
     }
   }
@@ -117,16 +117,16 @@
 
     @media (hover: hover) {
       &:hover {
-        background: @accenthover;
+        background: @accentHover;
 
         .iconUnvisible {
-          background: @accenthover;
+          background: @accentHover;
         }
       }
     }
 
     &:active {
-      background: @accentactive;
+      background: @accentActive;
     }
   }
 }

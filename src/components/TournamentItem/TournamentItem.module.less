@@ -5,40 +5,40 @@
   margin-bottom: 4px;
   display: flex;
 
-  background: @bgcomponent;
+  background: @bgComponent;
   border-radius: 4px;
   cursor: pointer;
 
   @media (hover: hover) {
     &:hover {
-      background: @bgcomponenthover;
+      background: @bgComponentHover;
 
       .button {
-        background: @accenthover;
+        background: @accentHover;
       }
 
       button[disabled] {
-        background: @buttoncancelled;
+        background: @buttonCancelled;
       }
     }
   }
 
   &:active {
-    background: @bgcomponentactive;
+    background: @bgComponentActive;
 
     .button {
-      background: @accentactive;
+      background: @accentActive;
     }
   }
 
   &.selected {
-    background: @bgcomponentselected;
+    background: @bgComponentActive;
 
     &:active {
-      background: @bgcomponentactive;
+      background: @bgComponentActive;
 
       .button {
-        background: @accentactive;
+        background: @accentActive;
       }
     }
   }
@@ -46,10 +46,12 @@
   &:has(button[disabled]) {
     cursor: not-allowed;
     @media (hover: hover) {
-      background: @bgcomponent;
+      background: @bgComponent;
     }
   }
 }
+
+
 
 .status {
   width: 16px;
@@ -148,12 +150,12 @@
   text-transform: uppercase;
   text-align: center;
   background: @accent;
-  color: @whitecolor;
+  color: @whiteColor;
   overflow-wrap: break-word;
 
 
   &[disabled] {
-    background: @buttoncancelled;
+    background: @buttonCancelled;
     color: rgba(255, 255, 255, 0.3);
     cursor: not-allowed;
   }
