@@ -88,6 +88,14 @@
 
 
 .balance {
+  @media (hover: hover) {
+    &:hover {
+      .iconVisible {
+        background: @accenthover;
+      }
+    }
+  }
+
   &:has(.showBalance) {
     background: @accent;
 

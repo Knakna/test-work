@@ -33,6 +33,14 @@
 
   &.selected {
     background: @bgcomponentselected;
+
+    &:active {
+      background: @bgcomponentactive;
+
+      .button {
+        background: @accentactive;
+      }
+    }
   }
 
   &:has(button[disabled]) {
@@ -57,10 +65,6 @@
 
   &.canceled {
     background: @statuscancelled;
-
-    &:hover {
-      all: unset;
-    }
   }
 }
 
