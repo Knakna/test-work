@@ -55,9 +55,9 @@ export function TournamentItem({tournamentData}) {
                             </div>
                         </div>
 
-                        <div style={{color: tournamentData["titleColor"]}} className={styles.title}>
+                        <h2 style={{color: tournamentData["titleColor"]}} className={styles.title}>
                             {title}
-                        </div>
+                        </h2>
 
                     </div>
                     <button className={styles.button} disabled={isCanceled}>
