@@ -33,13 +33,21 @@
     display: flex;
     gap: 1px;
   }
+}
 
-  .avatar {
-    img {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-    }
+.avatar {
+  img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+  }
+
+  .placeAvatar {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    border-radius: 50%;
+    background: @bgComponentActive;
   }
 }
 
@@ -61,11 +69,15 @@
   font-size: 12px;
   text-align: left;
   color: @whiteColor;
-  transition: background .3s;
+  transition: background 0.3s;
 
   @media (hover: hover) {
     &:hover {
       .iconUnvisible {
+        background: @accentHover;
+      }
+
+      .iconVisible {
         background: @accentHover;
       }
     }
@@ -73,6 +85,25 @@
 
   &:active {
     .iconUnvisible {
+      background: @accentActive;
+    }
+
+    .iconVisible {
+      background: @accentActive;
+    }
+  }
+
+  &:has(.showBalance) {
+    background: @accent;
+    gap: 3px;
+
+    @media (hover: hover) {
+      &:hover {
+        background: @accentHover;
+      }
+    }
+
+    &:active {
       background: @accentActive;
     }
   }
@@ -98,35 +129,5 @@
   span:nth-child(2) {
     display: inline-block;
     padding: 4px 0;
-  }
-}
-
-
-.balance {
-  @media (hover: hover) {
-    &:hover {
-      .iconVisible {
-        background: @accentHover;
-      }
-    }
-  }
-
-  &:has(.showBalance) {
-    background: @accent;
-    gap: 3px;
-
-    @media (hover: hover) {
-      &:hover {
-        background: @accentHover;
-
-        .iconUnvisible {
-          background: @accentHover;
-        }
-      }
-    }
-
-    &:active {
-      background: @accentActive;
-    }
   }
 }

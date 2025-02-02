@@ -11,7 +11,7 @@ export function Loader() {
                 </div>
             </div>
             <span>
-               Loadind  70%
+               Loadind 70%
             </span>
         </div>
     )

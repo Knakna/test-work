@@ -1,3 +1,5 @@
+import userAvatar from "./imgs/avatar.svg";
+
 export const data = [
     {
         id: "1",
@@ -75,4 +77,13 @@ export const data = [
         fixed: false,
         isSelected: true
     },
-]
+];
+
+export const userInfo =
+    {
+        id: "7",
+        name: "LongUserName",
+        balance: "100,500.00",
+        starCount: 5,
+        avatar: userAvatar
+    }

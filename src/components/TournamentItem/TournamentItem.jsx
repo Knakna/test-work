@@ -82,10 +82,9 @@ export function TournamentItem({tournamentData}) {
                             <span> {award}</span>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     )
 }
+

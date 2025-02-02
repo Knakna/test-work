@@ -1,50 +1,55 @@
 import styles from "./PlayerInfo.module.less";
-import star from "../../assets/img/Vector.svg";
-import avatar from "../../assets/img/Ellipse 464.svg";
+import star from "../../assets/imgs/star.svg";
 import visible from "../../assets/icons/visible.svg";
 import unvisible from "../../assets/icons/unvisible.svg";
 import {useState} from "react";
 
-export function PlayerInfo() {
+console.log(styles);
+
+export function PlayerInfo({userInfo}) {
+
+    const {name, balance, starCount, avatar} = userInfo;
 
     const [isBalanceVisible, setIsBalanceVisible] = useState(true);
-
     const toggleBalanceVisibility = () => {
         setIsBalanceVisible(!isBalanceVisible);
     };
+
+    const stars = Array(starCount).fill(null);
 
     return (
         <div className={styles.info}>
             <div className={styles.user}>
                 <div className={styles.wrap}>
                     <div className={styles.name}>
-                        LongUserName
+                        {name}
                     </div>
 
                     <div className={styles.rating}>
-                        <img src={star} alt="star"/>
-                        <img src={star} alt="star"/>
-                        <img src={star} alt="star"/>
-                        <img src={star} alt="star"/>
-                        <img src={star} alt="star"/>
+                        {stars.map((_, index) => (
+                            <img src={star} alt="star" key={index}/>
+                        ))
+                        }
                     </div>
+
                 </div>
 
                 <div className={styles.avatar}>
-                    <img src={avatar} alt="avatar"/>
+                    {avatar
+                        ? <img src={avatar} alt="avatar"/>
+                        : <span className={styles.placeAvatar}></span>
+                    }
                 </div>
             </div>
-
 
             <button className={styles.balance} onClick={toggleBalanceVisibility}>
                <span className={isBalanceVisible ? styles.iconVisible : styles.iconUnvisible}>
                     <img src={isBalanceVisible ? unvisible : visible} alt="icon"/>
                 </span>
-                {isBalanceVisible ? (
-                    <span className={styles.sum}>$100,500.00</span>
-                ) : (
-                    <span className={styles.showBalance}>Show balance</span>
-                )}
+                {isBalanceVisible
+                    ? <span className={styles.sum}>${balance}</span>
+                    : <span className={styles.showBalance}>Show balance</span>
+                }
             </button>
         </div>
     )

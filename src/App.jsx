@@ -3,8 +3,7 @@ import {PlayerInfo} from "./components/PlayerInfo/PlayerInfo.jsx";
 import {Loader} from "./components/Loader/Loader.jsx";
 import {TournamentItem} from "./components/TournamentItem/TournamentItem.jsx";
 import styles from './App.module.less';
-import {data} from './assets/data.js';
-
+import {data, userInfo} from './assets/data.js';
 
 
 function App() {
@@ -13,14 +12,13 @@ function App() {
             <div className={styles.container}>
                 <h1>Poker</h1>
                 <Spinner/>
-                <PlayerInfo/>
+                <PlayerInfo userInfo={userInfo}/>
                 <Loader/>
                 <div className={styles.wrapperTournaments}>
                     {data.map((item) => (
                         <TournamentItem tournamentData={item} key={item.id}/>
                     ))}
                 </div>
-
             </div>
         </div>
     );

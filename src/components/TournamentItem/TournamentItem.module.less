@@ -51,13 +51,11 @@
   }
 }
 
-
-
 .status {
   width: 16px;
   min-height: 78px;
   writing-mode: vertical-lr;
-  rotate: 180deg;
+  transform: rotate(180deg);
   text-align: center;
   font-size: 8px;
   line-height: 16px;
@@ -66,7 +64,7 @@
   background-color: @accent;
 
   &.canceled {
-    background: @statuscancelled;
+    background: @statusCancelled;
   }
 }
 
@@ -153,7 +151,6 @@
   color: @whiteColor;
   overflow-wrap: break-word;
 
-
   &[disabled] {
     background: @buttonCancelled;
     color: rgba(255, 255, 255, 0.3);
@@ -161,10 +158,8 @@
   }
 }
 
-
 .bottom {
-  .center-flex();
-  justify-content: flex-start;
+  .start-flex();
   flex-wrap: wrap;
   gap: 5px;
   min-height: 14px;

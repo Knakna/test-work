@@ -1,5 +1,5 @@
 import styles from "./Spinner.module.less";
-import spinner from "../../assets/img/spiner.svg";
+import spinner from "../../assets/imgs/spinner.svg";
 
 
 export function Spinner() {
