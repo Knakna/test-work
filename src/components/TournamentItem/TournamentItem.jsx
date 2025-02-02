@@ -68,7 +68,7 @@ export function TournamentItem({tournamentData}) {
                 <div className={styles.bottom}>
                     <div className={styles.time}>
                         <img src={timeIcon} alt="time"/>
-                        <span> {time}</span>
+                        <time>{time}</time>
                     </div>
 
                     <div className={styles.wrap}>
